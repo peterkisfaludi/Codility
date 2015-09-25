@@ -1,3 +1,5 @@
+# https://codility.com/demo/results/trainingA3K3DV-7EF/
+
 def solution(X, A):
     # write your code in Python 2.7
     

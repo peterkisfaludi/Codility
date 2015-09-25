@@ -1,3 +1,5 @@
+# https://codility.com/demo/results/training4TPBAD-ZMX/
+
 def solution(A, B):
     # write your code in Python 2.7
     

@@ -1,3 +1,5 @@
+# https://codility.com/demo/results/trainingGBRVNT-Q3M/
+
 def solution(A):
     # write your code in Python 2.7
     sm=sum(A)

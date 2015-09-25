@@ -1,3 +1,5 @@
+# https://codility.com/demo/results/trainingWZZA92-7AK/
+
 def solution(H):
     # write your code in Python 2.7
     

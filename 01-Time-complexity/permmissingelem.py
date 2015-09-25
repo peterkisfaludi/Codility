@@ -1,3 +1,5 @@
+# https://codility.com/demo/results/trainingTF75FS-HZG/
+
 def solution(A):
     # write your code in Python 2.7
     

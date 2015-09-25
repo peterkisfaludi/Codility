@@ -1,3 +1,5 @@
+# https://codility.com/demo/results/trainingSYNSK7-XJ7/
+
 def solution(S):
     # write your code in Python 2.7
     
