@@ -1,8 +1,9 @@
-# https://codility.com/demo/results/trainingTF75FS-HZG/
+# https://codility.com/demo/results/trainingTB24D8-RGA/
 
 def solution(A):
     # write your code in Python 2.7
     
     N=len(A)
-    sm=sum(A)
-    return abs(sm - sum(range(1,N+2)))
+    PS = (N+1)*(1+N+1)/2
+    S=sum(A)
+    return PS-S
