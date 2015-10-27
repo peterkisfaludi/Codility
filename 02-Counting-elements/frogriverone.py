@@ -1,16 +1,19 @@
-# https://codility.com/demo/results/trainingA3K3DV-7EF/
+# https://codility.com/demo/results/training89TSCH-AEW/
 
 def solution(X, A):
     # write your code in Python 2.7
+    N=len(A)
+    lvs = dict.fromkeys(xrange(1,X+1),0)
     
-    d=dict(zip(set(A),[0]*len(set(A))))
     cnt=0
-    
-    for k in range(len(A)):
-        if d[A[k]]==0:
-            d[A[k]]=1
+    for i in xrange(N):
+        x=A[i]
+        if x > N+1:
+            continue
+        
+        if lvs[x]==0:
+            lvs[x]=1
             cnt+=1
             if cnt==X:
-                return k
-                
+                return i
     return -1
