@@ -1,37 +1,29 @@
-# https://codility.com/demo/results/trainingWZZA92-7AK/
+# https://codility.com/demo/results/trainingJJHJFV-ZDR/
 
 def solution(H):
     # write your code in Python 2.7
     
-    N=len(H)
-        
+    stk=[]
     cnt=0
-    if N==1:
-        return 1
-        
-    stck = [H[0]]
-    cnt=1
-        
-    for x in H:                
-        v=stck[-1]
-        if x > v: 
+    
+    for x in H:
+        if len(stk)==0 or x>stk[-1]:
             cnt+=1
-            stck.append(x)
-            continue
-        elif x == v:
-            continue
+            stk.append(x)
         else:
-            while len(stck)>0:
-                v=stck[-1]
-                if x<v:
-                    stck.pop()
-                elif x==v:
+            while True:
+                if len(stk)==0:
+                    stk.append(x)
+                    cnt+=1
+                    break
+                
+                a=stk[-1]
+                if x<a:
+                    stk.pop()
+                elif x==a:
                     break
                 else:
+                    stk.append(x)
                     cnt+=1
-                    stck.append(x)
-        if len(stck)==0:
-            cnt+=1
-            stck.append(x)            
-                
+                    break                                    
     return cnt

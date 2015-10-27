@@ -1,27 +1,13 @@
-# https://codility.com/demo/results/training9MBBMJ-FCB/
+# https://codility.com/demo/results/trainingDM98X2-Z6H/
 
 def solution(A, B, K):
     # write your code in Python 2.7
     
-    if A==B:
-        if A%K==0:
-            return 1
-        else:
-            return 0
-            
-    if K>B:
+    F=(A//K)*K
+    F=F if A%K==0 else F+K
+    L=(B//K)*K
+    
+    if F<A or F>B or L<A or L>B or L<F:
         return 0
     
-    fst,lst=0,0
-    
-    lst = K*(B//K)
-    fst = K*(A//K)
-    if A%K!=0:
-        fst+=K
-        
-    if fst>lst:
-        return 0
-    if lst==fst:
-        return 1
-        
-    return (lst-fst)//K + 1
+    return (L-F)//K+1

@@ -1,22 +1,21 @@
-# https://codility.com/demo/results/trainingAFY6Z9-NF2/
+# https://codility.com/demo/results/trainingRBR94X-AB9/
 
 def solution(A):
     # write your code in Python 2.7
     N=len(A)
     
-    d=dict(zip(range(1,N+1),[0]*N))
-    
+    prm=dict.fromkeys(xrange(1,N+1),0)
     cnt=0
+    
     for x in A:
-        try:
-            if d[x]==0:
-                d[x]=1
+        if x <= N and x>=1:
+            if prm[x]==0:
+                prm[x]=1
                 cnt+=1
+                if cnt==N:
+                    return 1
             else:
                 return 0
-        except:
+        else:
             return 0
-            
-    if cnt==N:
-        return 1
     return 0
